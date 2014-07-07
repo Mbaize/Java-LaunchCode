@@ -13,30 +13,7 @@ import static java.lang.System.out;
 public class Pset2Mario {
     String pyramid;
 
-    public String pyramidBuilder(int rows) {
 
-
-        StringBuilder stringBuilder = new StringBuilder();
-
-
-        for (int i = 0; i < rows; i++) {
-
-
-            for (int j = (rows - (i + 1)); j > 0; j--) {
-                stringBuilder.append(" ");
-            }
-
-            for (int k = (i + 2); k > 0; k--) {
-                stringBuilder.append("#");
-            }
-
-            stringBuilder.append("\r\n");
-
-        }
-
-        pyramid = stringBuilder.toString();
-        return pyramid;
-    }
 
     public static void main(String[] varArgs) {
 
@@ -70,6 +47,31 @@ public class Pset2Mario {
         }
     }
 
+    public String pyramidBuilder(int rows) {
+
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+
+        for (int i = 0; i < rows; i++) {
+
+
+            for (int j = (rows - (i + 1)); j > 0; j--) {
+                stringBuilder.append(" ");
+            }
+
+            for (int k = (i + 2); k > 0; k--) {
+                stringBuilder.append("#");
+            }
+
+            stringBuilder.append("\r\n");
+
+        }
+
+        pyramid = stringBuilder.toString();
+        return pyramid;
+    }
+    
     public static void writeFile(String pyramid) throws IOException {
         PrintWriter out = null;
 
