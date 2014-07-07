@@ -13,7 +13,7 @@ import static java.lang.System.out;
 public class Pset2Mario {
     String pyramid;
 
-    public String builder(int rows) {
+    public String pyramidBuilder(int rows) {
 
 
         StringBuilder stringBuilder = new StringBuilder();
@@ -57,7 +57,7 @@ public class Pset2Mario {
             option = System.console().readLine();
         } while ((!option.equals("c")) && (!option.equals("f")));
 
-        m.builder(rows);
+        m.pyramidBuilder(rows);
 
         if (option.equals("c")) {
             out.print(m.pyramid);
