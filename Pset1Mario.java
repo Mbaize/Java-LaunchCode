@@ -6,7 +6,7 @@
 
 import java.io.Console;
 
-public class Mario {
+public class Pset1Mario {
 
 	public static void main(String[] varArgs) {
 		
