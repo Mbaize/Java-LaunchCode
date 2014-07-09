@@ -3,7 +3,7 @@
  */
 public class PrintFactory {
 
-    //use getPrint method to get object of type printer
+    //use getPrinter method to get correct type of printer object
     public Printer getPrinter(String option){
         if (option == null){
             return null;

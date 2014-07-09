@@ -5,7 +5,7 @@ import static java.lang.System.out;
  */
 public class ConsolePrint implements Printer {
 
-
+    //method prints converted string from pyramid object to console
     public void print(Pyramid pyramid) {
 
         //int rows = pyramid.getRows();

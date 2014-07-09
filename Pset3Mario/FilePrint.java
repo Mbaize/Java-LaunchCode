@@ -7,7 +7,7 @@ import java.io.PrintWriter;
  */
 public class FilePrint implements Printer {
 
-
+    //method will send converted string from pyramid object to file
     public void print(Pyramid pyramid) {
 
 

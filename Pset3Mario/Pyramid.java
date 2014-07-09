@@ -15,6 +15,7 @@ public class Pyramid {
             this.rows = rows;
         }
 
+        //creates a new StringBuilder based on the number of rows of the instantiated pyramid
         public StringBuilder builder() {
 
 
@@ -36,10 +37,4 @@ public class Pyramid {
             return stringBuilder;
         }
 
-    public int getRows() {
-        return this.rows;
-    }
-    /*public String getOption() {
-        return option;
-    }*/
 }
