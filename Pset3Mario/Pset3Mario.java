@@ -7,34 +7,36 @@ import static java.lang.System.out;
  */
 public class Pset3Mario {
 
-    int rows;
-    String option;
-
     public static void main(String[] varArgs) {
+
+        int rows;
+        String option;
 
         Pset3Mario mario = new Pset3Mario();
 
-        mario.rows = mario.checkRows();
-        mario.option = mario.checkPrint();
+        rows = mario.checkRows();
+        option = mario.checkPrint();
 
-        Pyramid pyramid = new Pyramid(mario.rows);
+        Pyramid pyramid = new Pyramid(rows);
 
         //pyramid.builder(mario.rows);
 
         PrintFactory printFactory = new PrintFactory();
 
-        Printer p = printFactory.getPrinter(mario.option);
+        Printer p = printFactory.getPrinter(option);
         //System.out.print(mario.option);
         p.print(pyramid);
 
 
     }
 
-    public int checkRows() {
+    private int checkRows() {
+
+        int rows;
+        String option;
 
         checker:
             do {
-                Console c = System.console();
                 out.print("How many rows high would you like the pyramid to be? (The number must be between 0 and 23, inclusive.) ");
                 try {
                     rows = Integer.parseInt(System.console().readLine());
@@ -46,18 +48,17 @@ public class Pset3Mario {
             return rows;
         }
 
-    public String checkPrint() {
+    private String checkPrint() {
+
+        int rows;
+        String option;
+
         do {
-            Console c = System.console();
             out.print("Press 'c' to print the pyramid on the console, or 'f' to send it to a text file.");
             option = System.console().readLine();
         } while ((!option.equalsIgnoreCase("c")) && (!option.equalsIgnoreCase("f")));
         return option;
 
-    }
-
-    public int getRows() {
-        return rows;
     }
 }
 
